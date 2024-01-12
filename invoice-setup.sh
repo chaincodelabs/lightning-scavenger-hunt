@@ -18,7 +18,7 @@ for ((i=1; i<=N; i++)); do
     random_amt=$((RANDOM % (10000 - 1000 + 1) + 1000))
 
     # Execute the reg_alice command to addinvoice with random_amt and wallet_name in memo, and capture the JSON output
-    json_output=$(lncli --network=signet addinvoice --amt="$random_amt" --memo="$wallet_name")
+    json_output=$(lncli --network=signet addinvoice --amt="$random_amt" --expiry=1209600 --memo="$wallet_name")
 
     # Extract the payment request field using jq
     payment_request=$(echo "$json_output" | jq -r '.payment_request')
