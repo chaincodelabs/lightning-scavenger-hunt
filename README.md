@@ -25,7 +25,8 @@ Lightning node pubkey: `0325ecd6d2d8739681e2f7644f4221ed942b76d6b7825d4e730671ad
 ## Node setup
 
 You will need to update your `bitcoind` node's config with some extra 
-options for lightning - see [bitcoin.conf](/conf/bitcoin.conf).
+options for lightning - see [bitcoin.conf](/conf/bitcoin.conf). 
+Bitcoind must be built *with ZMQ enabled* for this config to work.
 
 Next, spin up a lightning node to pay your invoice. There is a sample 
 config for [LND](https://github.com/lightningnetwork/lnd) available - 
@@ -33,6 +34,9 @@ see [lnd.conf](/conf/lnd.conf), you can use the following command to
 point lnd to this config file: 
 
 `lnd --configfile={PATH TO lnd.conf}`
+
+If you run into problems starting your node, the [LND community slack](https://lightning.engineering/slack.html)
+beginner-questions channel is a good place to ask setup questions. 
 
 ## Fund your Lightning Node
 
