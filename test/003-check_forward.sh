@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Read the value from the default rhash file
-# TODO: read the preimage and hash it rather than payment hash.
 rhash_value=$(cat submissions/003-paymenthash.txt)
 
 # Expected chan_id provided as the first argument

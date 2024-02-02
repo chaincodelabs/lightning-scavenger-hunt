@@ -154,6 +154,9 @@ Once you have successfully completed your custom route payment, submit the
 following in the [submissions](/submissions) directory:
 * `003-paymenthash.txt`: the hex encoded payment hash of your payment.
 
+Note: you need to submit the payment hash (not the preimage), which is used
+to check whether the payment has propagated along the correct route.
+
 ## Admin Infrastructure
 
 **Students do not need to read this section.**
