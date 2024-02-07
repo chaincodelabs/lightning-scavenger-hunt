@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Read the value from the default rhash file
-rhash_value=$(cat submissions/003-paymenthash.txt)
+# Source functions in shared preimage script.
+source test/preimage_utils.sh
+
+# Read the value from the default rhash file.
+rhash_value=$(calculate_sha256_hash "submissions/003-preimage.txt")
 
 # Expected chan_id provided as the first argument
 expected_chan_id=2811451232288768
